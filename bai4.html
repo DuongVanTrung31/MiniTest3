@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <h1 id='ketqua'></h1>
+    <p id='ketqua2'></p>
+    <p id='ketqua3'></p>
+    <script>
+        let input = +prompt(` Nhập số lượng mảng`);
+        let arr = new Array(input);
+        for (let i = 0; i < arr.length; i++){
+            arr[i] = +prompt(` Nhập phần tử thứ ${i + 1} :`);
+        }
+        function display(arr) {
+        let arr3=[];
+        let arr5=[];
+        let arrNot=[];
+        for (i = 0 ; i < arr.length; i++) {
+            if(arr[i] % 5 === 0) {
+                arr5.push(arr[i]);
+            } else if (arr[i] % 3 === 0) {
+                arr3.push(arr[i]);
+            } else {
+                arrNot.push(arr[i]);
+            }
+        }
+        if(arr3.length > arr5.length && arr3.length > arrNot.length) {
+            document.querySelector("#ketqua1").innerHTML = "C1021H1";
+        } else if (arr5.length > arrNot.length) {
+            document.querySelector('#ketqua2').innerHTML= '<i>Helloworld</i>';
+        } else {
+            document.querySelector('#ketqua3').innerHTML= '<b>CodeGym</b>';
+        }
+    }
+    display(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = +prompt(` Nhập số lượng mảng`);
+        let arr = new Array(input);
+        for (let i = 0; i < arr.length; i++){
+            arr[i] = +prompt(` Nhập phần tử thứ ${i + 1} :`);
+        }
+        let sum = 0;
+        for (let i = 0 ; i < arr.length ; i++){
+                if(arr[i] >= 2 && arr[i] < 200) {
+                    for (let j = 2 ; j < arr[i]; j ++){
+                        if (arr[i] % j !== 0) {
+                            sum += arr[i];
+                        }
+                    }
+            }
+        }
+    document.write(` Tổng SNT của ${input} số trong mảng là ${sum}`);
+    </script>
+</body>
+</html>
